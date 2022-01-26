@@ -5,11 +5,11 @@
     src=".github/example.png"/> 
 </p>
 
-<p align="center">
+<div style="text-align:center">
 
-para acessar [Click Aqui]("https://tmz81.github.io/Fuzz-SPA/")
+Para acessar [Click Aqui](https://tmz81.github.io/Fuzz-SPA/)
 
-<p>
+</div>
 
 ## 💻 Tecnologias
 
