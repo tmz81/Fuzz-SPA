@@ -6,10 +6,10 @@
 </p>
 
 <p align="center">
-  <a src="https://tmz81.github.io/Fuzz-SPA/">
-    Click aqui para Acessar
-  </a>
-</p>
+
+para acessar [Click Aqui]("https://tmz81.github.io/Fuzz-SPA/")
+
+<p>
 
 ## 💻 Tecnologias
 
