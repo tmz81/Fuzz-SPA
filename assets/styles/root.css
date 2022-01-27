@@ -1,3 +1,4 @@
+/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
@@ -8,7 +9,7 @@
   --text-color: hsl(var(--hue-color), 4%, 75%);
   --text-color-light: hsl(var(--hue-color), 4%, 65%);
   --white-color: #fff;
-  --body-color: hsl(var(--hue-color), 4%, 6%);
+  --body-color: #f4f4f4;
   --container-color: hsl(var(--hue-color), 4%, 10%);
   --text-gradient: linear-gradient(
     hsl(var(--hue-color), 4%, 24%),
