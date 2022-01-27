@@ -3,26 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="#" type="#" />
     <!--=============== REMIX ICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="video.css" />
+
+    <link rel="stylesheet" href="/assets/styles/index.css" />
+    <link rel="stylesheet" href="/assets/styles/base.css">
+    <link rel="stylesheet" href="/assets/styles/root.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
     <title>Fuzz</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">
-          <img src="" alt="" />
-        </a>
-
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
@@ -30,9 +26,6 @@
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#case" class="nav__link">Void</a>
             </li>
             <li class="nav__item">
               <a href="#art" class="nav__link">Tattoos</a>
@@ -55,7 +48,7 @@
       <section class="home section" id="home">
         <div class="home__container container grid">
           <div>
-            <img src="/assets/tattoo-sobre.png" alt="" class="home__img" />
+            <img src="/assets/img/tattoo-sobre.png" alt="" class="home__img" />
           </div>
 
           <div class="home__data">
@@ -80,14 +73,13 @@
       <!--=============== video ===============-->
       <section class="video section" id="about">
         <div class="container grid">
-          <h2 class="section__title section__title-gradient">Vídeopart</h2>
+          <h2 class="section__title section__title-gradient">About</h2>
 
           <div class="video__play">
-            <video controls src="http://www.youtube.com"></video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A1vKAe9RUsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </section>
-
 
       <!--=============== TATTOOS ===============-->
       <section class="products section" id="art">
@@ -109,21 +101,6 @@
               <img src="/assets/tattoo3.png" alt="" class="products__img" />
             </div>
           </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img src="/assets/tattoo4.png" alt="" class="products__img" />
-            </div>
-          </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img src="/assets/tattoo5.png" alt="" class="products__img" />
-            </div>
-          </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img src="/assets/tattoo6.png" alt="" class="products__img" />
-            </div>
-          </article>
         </div>
       </section>
     </main>
@@ -133,15 +110,7 @@
       <div class="footer__container container grid">
         <div class="footer__content">
 
-
         <div class="footer__content">
-          <form action="" class="footer__form">
-            <input type="email" placeholder="Email" class="footer__input" />
-            <button class="button button--flex">
-              <i class="ri-send-plane-line button__icon"></i> Subscribe
-            </button>
-          </form>
-
           <div class="footer__social">
             <a
               href="https://www.facebook.com/"
@@ -168,100 +137,11 @@
         </div>
       </div>
     </footer>
-
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
       <i class="ri-arrow-up-s-line scrollup__icon"></i>
     </a>
-
-    <!--=============== SCROLL REVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="/main.js"></script>
   </body>
 </html>
-
-<!--=============== SPONSOR ===============-->
-<!-- <section class="sponsor section">
-        <div class="sponsor__container container grid">
-          <img src="Wtattoo9.png" alt="" class="sponsor__img" />
-          <img src="/assets/tattoo8.png" alt="" class="sponsor__img" />
-          <img src="/assets/tattoo7.png" alt="" class="sponsor__img" />
-          <img src="/assets/tattoo6.png" alt="" class="sponsor__img" />
-        </div>
-      </section> -->
-
-            <!--=============== CASE ===============-->
-            <!-- <section class="case section grid" id="case">
-              <h2 class="section__title section__title-gradient">Tattoos</h2>
-      
-              <div class="case__container container grid">
-                <div>
-                  <img src="/assets/tattoo-capa4.png" alt="" class="case__img" />
-                </div>
-      
-                <div class="case__data">
-                  <p class="case__description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-                    voluptatum aut qui voluptate dolorum. Quisquam modi officiis rerum
-                    optio corrupti, nemo, quas, perspiciatis excepturi recusandae
-                    veniam inventore minus dolores expedita.
-                  </p>
-                </div>
-              </div>
-            </section> -->
-      
-
-            <!--=============== DISCOUNT ===============-->
-            <!-- <section class="discount section">
-              <div class="discount__container container grid">
-                <div class="discount__animate">
-                  <h2 class="discount__title">Tattoos abstratas</h2>
-                  <p class="discount__description">Saca que doidera</p>
-                  <img src="/assets/tattoo-capa1.png" alt="" class="discount__img" />
-                </div>
-      
-                <img src="/assets/tattoo-capa2.png" alt="" class="discount__img2" />
-                <img src="/assets/tattoo-capa3.png" alt="" class="discount__img3" />
-              </div>
-            </section> -->
-
-<!--=============== FOOTER EQUIPS ===============-->
-<!-- <div class="footer__content">
-        <h3 class="footer__title">Equipamentos</h3>
-
-        <ul class="footer__links">
-          <li>
-            <a href="#" class="footer__link">Luvas</a>
-          </li>
-          <li>
-            <a href="#" class="footer__link">Mascaras</a>
-          </li>
-          <li>
-            <a href="#" class="footer__link">Agulhas</a>
-          </li>
-          <li>
-            <a href="#" class="footer__link">Tinta</a>
-          </li>
-        </ul>
-      </div> -->
-
-<!--=============== FOOTER EQUIPS/2 ===============-->
-      <!-- <h3 class="footer__title">Tattoos</h3>
-
-      <ul class="footer__links">
-        <li>
-          <a href="#" class="footer__link">Artes autorais</a>
-        </li>
-        <li>
-          <a href="#" class="footer__link">Abstractatp</a>
-        </li>
-        <li>
-          <a href="#" class="footer__link">Mão Livre</a>
-        </li>
-        <li>
-          <a href="#" class="footer__link">Anime</a>
-        </li>
-      </ul>
-    </div> -->
