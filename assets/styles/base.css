@@ -31,14 +31,8 @@ a {
   text-decoration: none;
 }
 
-button,
-input {
-  border: none;
-  outline: none;
-}
-
-button {
-  cursor: pointer;
+p {
+  color: var(--black-color);
 }
 
 img {
