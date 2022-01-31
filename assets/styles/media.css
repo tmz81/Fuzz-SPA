@@ -41,6 +41,10 @@
     grid-template-columns: 142px;
     justify-content: center;
   }
+  .play {
+    width: 20px;
+    height: 25px;
+  }
 }
 
 /* For medium devices */
