@@ -20,6 +20,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .home__container {
+    grid-template-columns: 1fr 1fr;
+  }
   .section__title {
     font-size: var(--small-font-size);
   }
@@ -42,8 +46,15 @@
     justify-content: center;
   }
   .play {
-    width: 20px;
+    width: 34px;
     height: 25px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .play {
+    width: 290px;
+    height: 200px;
   }
 }
 
@@ -62,6 +73,10 @@
   .products__container {
     grid-template-columns: repeat(3, 142px);
     justify-content: center;
+  }
+  .play {
+    width: 440px;
+    height: 280px;
   }
 }
 
