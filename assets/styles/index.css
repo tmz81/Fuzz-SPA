@@ -183,6 +183,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem 1.5rem;
   padding-top: 3rem;
+  background-color: var(--text-gradient);
 }
 
 .products__card {
