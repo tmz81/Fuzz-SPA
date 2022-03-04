@@ -32,7 +32,7 @@
 }
 
 /*=============== HEADER ===============*/
-#header {
+.header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -172,6 +172,27 @@
 .home__description {
   margin-bottom: var(--mb-2-5);
   line-height: var(--text-line-height);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 14rem;
+  height: 3.5rem;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+
+  background-color: var(--black-color-alt);
+}
+
+.button:hover {
+  background-color: var(--black-color);
 }
 
 /*=============== PRODUCTS ===============*/
