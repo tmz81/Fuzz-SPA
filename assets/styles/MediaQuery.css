@@ -21,12 +21,12 @@
   .section__title {
     font-size: var(--big-font-size);
   }
+  .home__container {
+    grid-template-columns: 1fr;
+  }
   .home__img {
     width: 100vw;
     top: -13rem;
-    /* top: 7rem;
-    left: 0;
-    width: 100vw; */
   }
   .home__title {
     top: -4rem;
@@ -39,30 +39,13 @@
     font-size: var(--small-font-size);
   }
   .products__container {
-    grid-template-columns: 142px;
-    justify-content: center;
-  }
-  /* .home__container {
     grid-template-columns: 1fr;
-    margin: var(--mb-1);
-  } */
-  /* .home__subtitle {
-    font-size: 2rem;
-    padding-top: 0.8rem;
-  } */
-  
-  #about {
-  }
-  #about__container{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 }
 
 /* For medium devices */
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -70,29 +53,16 @@
   .home__img {
     width: 100vw;
     top: -13rem;
-    /* top: -7rem;
-    left: 0;
-    width: 100vw; */
   }
   .home__data {
     padding-top: 5rem;
   }
-  
   .home__container {
     grid-template-columns: 1fr;
   }
   .products__container {
     grid-template-columns: repeat(1fr);
     justify-content: center;
-  }
-  #about {
-   padding-bottom: 4rem; 
-  }
-  #about__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -118,14 +88,14 @@
   .nav__close {
     display: none;
   }
+  
   .home__container {
     position: relative;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .home__img {
     top: -9rem;
     left: 4rem;
-    width: 100vw;
   }
   .home__data {
     padding-top: 8rem;
@@ -145,10 +115,6 @@
   .footer__container {
     grid-template-columns: 1fr;
   }
-
-  #about__container{
-
-  }
 }
 
 /* For large devices */
@@ -156,11 +122,18 @@
   .container {
     margin-left: auto;
     margin-right: auto;
-    top: 4rem;
+  }
+  .home__container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img-div {
+    width:450px;
+    height:430px;
+    margin: auto;
   }
   .home__img {
-    width: 400px;
-    top: -10rem;
+    width: 100%;
   }
   .home__title {
     top: -5rem;

@@ -76,6 +76,6 @@ const sr = ScrollReveal({
 sr.reveal(`.home__header, .section__title`,{delay: 600})
 sr.reveal(`.home__footer`,{delay: 600})
 sr.reveal(`.home__img`,{delay: 600, origin: 'top'})
-sr.reveal(`.video__play`, {delay: 600})
+sr.reveal(`.video`, {delay: 600})
 
 sr.reveal(`.products__card, .footer__content`, {origin: 'top', interval: 100})
