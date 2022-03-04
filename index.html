@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/assets/styles/Global.css" />
     <link rel="stylesheet" href="/assets/styles/Root.css">
     <link rel="stylesheet" href="/assets/styles/MediaQuery.css">
-    <title>Thaik Santos</title>
+    <link rel="stylesheet" href="Swiper.css">
+    <title>Thaik Santos | Fuzz</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
@@ -80,16 +81,26 @@
       <!--=============== TATTOOS ===============-->
       <section class="products section" id="tattoo">
         <h2 class="section__title section__title-gradient products__line">Tattoos</h2>
-
-        <div class="products__container container grid">
+        <!-- ActionModal -->
+        <div class="modal">
+          <!-- CloseButton -->
+          <span class="close">X</span>
+          <img class="modal-content" id="img01">
+        </div>
+        <div class="products__container">
           <article class="products__card">
             <div class="products__content">
-              <img src="/assets/img/tattoo-card-1.png" alt="" class="products__img" />
+              <img
+              class="products__img"
+              src="/assets/img/tattoo-card-1.png"
+              />
             </div>
           </article>
-          <article class="products__card">
+          <article class="products__card" >
             <div class="products__content">
-              <img src="/assets/img/tattoo-card-2.png" alt="" class="products__img" />
+              <img 
+              class="products__img"
+              src="/assets/img/tattoo-card-2.png"/>
             </div>
           </article>
           <article class="products__card">

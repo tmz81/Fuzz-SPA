@@ -79,3 +79,26 @@ sr.reveal(`.home__img`,{delay: 600, origin: 'top'})
 sr.reveal(`.video`, {delay: 600})
 
 sr.reveal(`.products__card, .footer__content`, {origin: 'top', interval: 100})
+
+//// My code /////
+
+// get the modal
+// var modal = document.querySelector(".modal");
+
+// // get the image and insert it inside the modal
+// var img = document.getElementById("myImg");
+// var modalImg = document.getElementById("img01");
+// var span = document.getElementsByClassName("close")[0];
+
+// img.onclick = () => {
+//   img.style.display = "block";
+//   modalImg.src = this.src;
+// }
+
+// span.onclick = () => modal.style.display = "none";
+
+const photo = document.getElementsByClassName("products__img");
+
+photo.addEventListener("click", () => {
+    photo.classList.add("active-modal")
+})
