@@ -9,35 +9,20 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/assets/styles/index.css" />
-    <link rel="stylesheet" href="/assets/styles/base.css">
-    <link rel="stylesheet" href="/assets/styles/root.css">
-    <link rel="stylesheet" href="/assets/styles/font.css">
-    <link rel="stylesheet" href="/assets/styles/media.css">
-    <link rel="stylesheet" href="/assets/styles/ButtonTheme.css">
+    <link rel="stylesheet" href="/assets/styles/Global.css" />
+    <link rel="stylesheet" href="/assets/styles/Root.css">
+    <link rel="stylesheet" href="/assets/styles/MediaQuery.css">
     <title>Fuzz</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
-    <header class="header" id="header">
+    <header id="header">
       <nav class="nav container">
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#art" class="nav__link">Tattoos</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link">
-                <input id="switch" type="checkbox" name="theme" />
-                <label for="switch"></label>
-              </a>
-            </li>
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#art" class="nav__link">Tattoos</a></li>
           </ul>
 
           <div class="nav__close" id="nav-close">
@@ -111,11 +96,11 @@
 
       <!--=============== video ===============-->
       <section class="video section" id="about">
-        <div class="container grid">
-          <!-- <h2 class="section__title section__title-gradient">About</h2> -->
+        <div class="container grid" id="about__container">
+          <h2 class="section__title section__title-gradient">About</h2>
 
-          <div class="video__play">
-            <iframe class="play" src="https://www.youtube.com/embed/A1vKAe9RUsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/A1vKAe9RUsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </section>
@@ -186,7 +171,5 @@
     </a>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/main.js"></script>
-    <script src="/ButtonTheme.js"></script>
-
   </body>
 </html>
