@@ -14,10 +14,6 @@
 
 /* For small devices */
 @media screen and (max-width: 340px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
   .section__title {
     font-size: var(--big-font-size);
   }
@@ -46,10 +42,6 @@
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
   .home__img {
     width: 100vw;
     top: -13rem;
@@ -88,12 +80,13 @@
   .nav__close {
     display: none;
   }
-  
   .home__container {
     position: relative;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
   .home__img {
+    margin-left: -0.8rem;
     top: -9rem;
     left: 4rem;
   }
@@ -127,13 +120,9 @@
     position: relative;
     grid-template-columns: repeat(2, 1fr);
   }
-  .img-div {
-    width:450px;
-    height:430px;
-    margin: auto;
-  }
   .home__img {
     width: 100%;
+    margin-left: -1rem;
   }
   .home__title {
     top: -5rem;

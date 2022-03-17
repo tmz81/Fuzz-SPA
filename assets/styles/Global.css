@@ -20,7 +20,6 @@
 .main {
   overflow: hidden;
 }
-
 .video {
   position: relative;
   margin: 0px -20px 30px -20px;
@@ -53,7 +52,7 @@ iframe {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 /*=============== NAV ===============*/
@@ -66,14 +65,14 @@ iframe {
 
 .nav__toggle {
   font-size: 1.2rem;
-  color: var(--black-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
-    background-color: var(--body-color);
+    background-color: var(--black-color-alt);
     top: -100%;
     left: 0;
     width: 100%;
@@ -90,11 +89,11 @@ iframe {
 }
 
 .nav__link {
-  color: var(--black-color);
+  color: var(--white-color);
   font-size: var(--h2-font-size);
   text-transform: uppercase;
   font-weight: var(--font-semi-bold);
-  background: var(--text-gradient);
+  background: grey;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -102,7 +101,7 @@ iframe {
 }
 
 .nav__link:hover {
-  background: var(--black-color);
+  background: var(--white-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -113,7 +112,7 @@ iframe {
   font-size: 1.5rem;
   top: 1rem;
   right: 1rem;
-  color: var(--black-color);
+  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -129,12 +128,12 @@ iframe {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
+  background-color: var(--black-color-alt);
 }
 
 /* Active link */
 .active-link {
-  background: var(--black-color);
+  background: var(--white-color);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -148,19 +147,23 @@ iframe {
   border-radius: 8px;
 }
 
-.home__img:hover {
-  transform: (1.1);
-  transition: all 0.5;
+.img__container::before {
+  content: '';
+  height: 75%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  position: absolute;
+  top: 4%;
+  left: -5%;
+  z-index: 0;
 }
-
 .home__data {
   padding-top: 5rem;
 }
-
 .home__header {
   position: relative;
 }
-
 .home__title {
   position: absolute;
   top: -4rem;
@@ -189,30 +192,6 @@ iframe {
   line-height: var(--text-line-height);
 }
 
-.button {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 14rem;
-  height: 3.5rem;
-  color: #fff;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0 2rem;
-  border-radius: 0.25rem;
-  background-color: var(--black-color-alt);
-}
-
-i {
-  margin-left: 1.2px;
-}
-
-.button:hover {
-  background-color: var(--black-color);
-}
-
 /*=============== PRODUCTS ===============*/
 .products__line {
   line-height: 4rem;
@@ -223,7 +202,7 @@ i {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem 1.5rem;
   padding-top: 3rem;
-  background-color: var(--text-gradient); 
+  background-color: var(--text-gradient);
 }
 
 .products__card {
@@ -324,51 +303,15 @@ i {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scroll-thumb-color-alt);
 }
-
-.active-modal {
-  display: none;
-  position: fixed;
-  padding-top: 100px;
-  z-index: 1;
-
-  top: 0;
-  left: 0;
+.modal {
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0,);
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  display: block;
-  margin: auto;
-  width: 80%;
-  max-width: 700px;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  } to {
-    transform: scale(1);
-  }
-}
-
-.close {
   position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.4s;
-}
-
-.close:hover {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  margin-top: -1px;
+  animation: zoom 0.3s ease-in-out;
 }
