@@ -11,7 +11,6 @@
     --smaller-font-size: 0.813rem;
   }
 }
-
 /* For small devices */
 @media screen and (max-width: 340px) {
   .section__title {
@@ -39,7 +38,6 @@
     justify-content: center;
   }
 }
-
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .home__img {
@@ -57,7 +55,6 @@
     justify-content: center;
   }
 }
-
 @media screen and (min-width: 767px) {
   body {
     margin: 0;
@@ -109,7 +106,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 /* For large devices */
 @media screen and (min-width: 1024px) {
   .container {
