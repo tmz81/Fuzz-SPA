@@ -1,18 +1,16 @@
-/*=============== SHOW MENU ===============*/
+// get ids menu from html
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
+/* Validate if constant exists then menu show  */
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
+/* Validate if constant exists then menu hiddren */
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
@@ -46,10 +44,9 @@ images.forEach((img) => {
   img.addEventListener("click", (e) => {
     imgSrc = e.target.src;
     imgModal(imgSrc)
-    console.log('clicou');
   })
 })
-// create modal
+
 let imgModal = (src) => {
   const modal = document.createElement("div");
     modal.setAttribute("class", "modal");
@@ -63,8 +60,11 @@ let imgModal = (src) => {
     closeBtn.onclick = () => {
       modal.remove();
     };
-
-  modal.append(newImage, closeBtn);
+  
+  const keyEscape = document.addEventListener("keydown", (e)=> {
+    if(e.key === 'Escape') modal.remove()
+  })
+  modal.append(newImage, closeBtn, keyEscape);
 };
 
 /*=============== SHOW SCROLL UP ===============*/

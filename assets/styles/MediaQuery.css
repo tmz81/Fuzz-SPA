@@ -37,6 +37,9 @@
     grid-template-columns: 1fr;
     justify-content: center;
   }
+  /* .modal {
+    display: block;
+  } */
 }
 /* For medium devices */
 @media screen and (min-width: 576px) {
