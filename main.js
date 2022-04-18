@@ -55,16 +55,16 @@ let imgModal = (src) => {
   const newImage = document.createElement("img");
     newImage.setAttribute("src", src);
   
-  const closeBtn = document.createElement("i");
+  const closeBtn = document.createElement("span");
     closeBtn.setAttribute("class", "ri-close-circle-line closeBtn");
     closeBtn.onclick = () => {
       modal.remove();
     };
   
-  const keyEscape = document.addEventListener("keydown", (e)=> {
+  document.addEventListener("keydown", (e)=> {
     if(e.key === 'Escape') modal.remove()
   })
-  modal.append(newImage, closeBtn, keyEscape);
+  modal.append(newImage, closeBtn);
 };
 
 /*=============== SHOW SCROLL UP ===============*/
