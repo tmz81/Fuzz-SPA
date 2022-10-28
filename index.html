@@ -1,178 +1,379 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--=============== REMIX ICONS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/styles/Global.css" />
-    <link rel="stylesheet" href="/assets/styles/Root.css">
-    <link rel="stylesheet" href="/assets/styles/MediaQuery.css">
-    <title>Thaik Santos | Fuzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuzz</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#tattoo" class="nav__link">Tatuagens</a></li>
-            <li class="nav__item"><a href="#art" class="nav__link">Artes</a></li>
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="#">Thaik<span>Santos</span>.</a>
+        <!-- menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#about">Bio</a></li>
+            <li><a class="title" href="#services">Tattoos</a></li>
+            <li>
+              <a class="title" href="#artistic-process">Creative Process</a>
+            </li>
+            <li><a class="title" href="#testimonials">Paintings</a></li>
+            <li><a class="title" href="#contact">Contact</a></li>
           </ul>
-
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-line"></i>
-          </div>
         </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-line"></i>
-        </div>
+        <!-- /menu -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
-    <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div>
-            <img src="/assets/img/tattoo-capa.png" alt="" class="home__img" />
-          </div>
 
-          <div class="home__data">
-            <div class="home__header">
-              <h1 class="home__title">Thaik</h1>
-              <h2 class="home__subtitle">Santos</h2>
-            </div>
-
-            <div class="home__footer">
-              <h3 class="home__title-description">
-                Sobre mim...
-              </h3>
-              <p class="home__description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-                esse dicta laboriosam vel. Itaque consequatur voluptatum
-                aperiam, excepturi at id natus enim illum, et unde molestias
-                veniam suscipit voluptatibus dolores!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--=============== video ===============-->
+    <main>
+      <!-- ABOUT -->
       <section class="section" id="about">
-        <div class="container grid" id="about__container">
-          <h2 class="section__title section__title-gradient">About</h2>
-
-          <div class="video">
-            <iframe width="560" height="310"src="https://www.youtube.com/embed/A1vKAe9RUsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="container grid">
+          <div class="image">
+            <img src="assets/bio.jpeg" alt="3 mulheres sorrindo" />
+          </div>
+          <div class="text">
+            <h2 class="title">Bio</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Necessitatibus deleniti perferendis vel molestiae soluta, quaerat
+              beatae dicta ducimus praesentium architecto harum dolorum
+              distinctio illo earum assumenda itaque. Omnis, quam repellat.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              illum ratione impedit quae eum quis adipisci asperiores, est
+              doloribus distinctio excepturi minima eius dolore! Perferendis
+              laborum illo aspernatur repellendus ipsum.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
+              exercitationem, illum sapiente quasi hic iusto odio maiores esse
+              quaerat quis necessitatibus at odit, dolores dicta, officia ab
+              quos. Provident, quae.
+            </p>
           </div>
         </div>
       </section>
 
-      <!--=============== TATTOOS ===============-->
-      <section class="products section" id="tattoo">
-        <h2 class="section__title section__title-gradient products__line">Tattoos</h2>
-        
-        <div class="products__container">
-          <article class="products__card">
-            <div class="products__content">
-              <img
-              class="products__img"
-              src="/assets/img/tattoo-card-1.png"
-              />
-            </div>
-          </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img
-              class="products__img"
-              src="/assets/img/tattoo-card-2.png"
-              />
-            </div>
-          </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img
-              class="products__img"
-              src="/assets/img/tattoo-card-3.png"
-              />
-            </div>
-          </article>
-        </div>
-      </section>  
-      
-      <!--=============== ART =============== -->
-      <!-- <section class="products section" id="art">
-        <h2 class="section__title section__title-gradient products__line">Artes</h2>
-        
-        <div class="products__container">
-          <article class="products__card">
-            <div class="products__content">
-              <img
-              class="products__img"
-              src="/assets/img/art-04.png"/>
-            </div>
-          </article>
-          <article class="products__card" >
-            <div class="products__content">
-              <img 
-              class="products__img"
-              src="/assets/img/art-04.png"/>
-            </div>
-          </article>
-          <article class="products__card">
-            <div class="products__content">
-              <img 
-              class="products__img"
-              src="/assets/img/art-04.png"/>
-            </div>
-          </article>
-        </section> -->
-      <div class="background"></div>
+      <div class="divider-2"></div>
 
-      </main>
-      <footer class="footer section">
-        <div class="footer__container container grid">
-        <div class="footer__content">
+      <!-- TATTOOS -->
+      <section class="section" id="services">
+        <div class="container">
+          <header>
+            <h2 class="title">Tattoos</h2>
+            <p class="subtitle">
+              Com mais de 10 anos no mercado, o artista
+              <strong>ThaikSantos</strong> já conquistou clientes de inúmeros
+              países com seus tratamentos exclusivos e totalmente abstratos
+            </p>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
 
-          <div class="footer__content">
-          <div class="footer__social">
-            <a
-              href="https://www.facebook.com/fuzzrabiscaria"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="ri-facebook-fill"></i>
-            </a>
-            <a
-            href="https://www.instagram.com/thaik.ttt/"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=5581987261402&text=Olá%20Thaik!%20Desejo%20fazer%20um%20orçamento"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="ri-whatsapp-line"></i>
-            </a>
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
+        </div>
+      </section>
+
+      <!-- ARTISTIC-PROCESS -->
+      <section class="section" id="artistic-process">
+        <div class="container grid">
+          <h2 class="title">Processo Artístico</h2>
+          <div class="video">
+            <iframe
+              width="560"
+              height="310"
+              src="https://www.youtube.com/embed/A1vKAe9RUsQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENS -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Telas</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/frame-fuzz.jpg" />
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <img src="assets/home.jpeg" />
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato!</h2>
+            <p>
+              Entre em contato com ThaikSantos, tire suas dúvidas, realize seu
+              orçamento agora.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5511998456754&text=Oi! Gostaria de agendar um horário"
+              class="button"
+              target="_blank"
+              ><i class="icon-whatsapp"></i> Entrar em contato</a
+            >
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> 81 3445-6754</li>
+              <li><i class="icon-map-pin"></i> R. Boa Viagem, 346</li>
+              <li><i class="icon-mail"></i> @thaiksantos.com</li>
+            </ul>
+          </div>
+
+          <div class="social grid">
+            <a href="https://instagram.com" target="_blank">
+              <i class="icon-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <i class="icon-facebook"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="icon-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <!-- <a class="logo logo-alt" href="#home">beauty<span>salon</span>.</a> -->
+          <p>©2023 ThaikSantos.</p>
+        </div>
+        <div class="brand">
+          <p>Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
 
-    <!--=============== SCROLL UP ===============-->
-    <a href="#" class="scrollup" id="scroll-up">
-      <i class="ri-arrow-up-s-line scrollup__icon"></i>
-    </a>
+    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/main.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+
+    <!-- HOME -->
+    <!-- <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img src="assets/home.jpeg" />
+          </div>
+          <div class="text">
+            <h2 class="title">Fuzz</h2>
+            <p>
+              Um studio exclusivo em Recife, especializado em tattoos abstradas.
+            </p>
+            <a class="button" href="#">Realizar orçamento</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div> -->
+
+    <!-- <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Tattoos</h2>
+            <p class="subtitle">
+              Com mais de 10 anos no mercado, o artista
+              <strong>ThaikSantos</strong> já conquistou clientes de inúmeros
+              países com seus tratamentos exclusivos e totalmente abstratos
+            </p>
+          </header>
+          <div class="container" id="testimonials">
+            <div class="testimonials swiper-container">
+              <div class="swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                      <img
+                        src="assets/frame-fuzz.jpg"
+                      />
+                  </blockquote>
+                </div>
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <img
+                      src="assets/home.jpeg"
+                    />
+                </blockquote>
+                </div>
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <img
+                      src="assets/home.jpeg"
+                    />
+                </blockquote>
+                </div>
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <img
+                      src="assets/home.jpeg"
+                    />
+                </blockquote>
+                </div>
+              <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cards grid">
+            <div class="card">
+              <img src="assets/tattoo2.jpeg" />
+            </div>
+            <div class="card">
+              <img src="assets/tattoo1.jpeg" />
+            </div>
+            <div class="card">
+              <img src="assets/tattoo3.jpeg" />
+            </div>
+          </div>
+        </div>
+      </section> -->
   </body>
 </html>
