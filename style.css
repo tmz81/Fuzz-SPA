@@ -44,6 +44,8 @@ img {
   --title-2: 'Babylonica';
   --title-3: 'Water Brush';
   --title-4: 'DM Sans';
+  --title-5: 'Splash';
+
 
   --background: #000;
   /* --text-color: #FFF; */
@@ -67,7 +69,7 @@ body {
 }
 
 .title {
-  font: 700 var(--title-font-size) var(--title-3);
+  font: 700 var(--title-font-size) var(--title-5);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -148,7 +150,7 @@ body {
 
 /*====  LOGO ============================ */
 .logo {
-  font: 700 1.31rem var(--title-3);
+  font: 700 1.31rem var(--title-5);
   color: var(--title-color);
 }
 
@@ -303,7 +305,7 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  font-family: var(--title-3);
+  font-family: var(--title-1);
 }
 
 /* === ARTISTIC-PROCESS */
@@ -352,7 +354,7 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
   margin-bottom: 0;
   text-align: center;
-  font-family: var(--title-3);
+  font-family: var(--title-1);
 }
 
 #services blockquote {
@@ -655,7 +657,7 @@ footer .brand p {
   }
 
   nav .menu ul li a.title {
-    font: 400 1rem var(--title-3);
+    font: 400 1rem var(--title-5);
     -webkit-font-smoothing: antialiased;
   }
 
