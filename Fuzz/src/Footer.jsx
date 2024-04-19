@@ -7,9 +7,9 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
-import FacebookIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Copyright() {
   return (
@@ -51,10 +51,10 @@ export default function Footer() {
         >
           <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
             <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
+              Ativar notificações.
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
+              Informe seu e-mail para receber notificações de novas postagens.
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap>
               <TextField
@@ -64,7 +64,7 @@ export default function Footer() {
                 variant="outlined"
                 fullWidth
                 aria-label="Enter your email address"
-                placeholder="Your email address"
+                placeholder="exemplo@gmail.com"
                 inputProps={{
                   autocomplete: "off",
                   ariaLabel: "Enter your email address",
@@ -75,134 +75,59 @@ export default function Footer() {
                 color="primary"
                 sx={{ flexShrink: 0 }}
               >
-                Subscribe
+                Inscrever-se
               </Button>
             </Stack>
           </Box>
         </Box>
         <Box
           sx={{
-            display: { xs: "none", sm: "flex" },
-            flexDirection: "column",
-            gap: 1,
+            display: "flex",
+            justifyContent: "space-between",
+            pt: { xs: 4, sm: 8 },
+            width: "100%",
+            borderBottom: "1px solid",
+            borderColor: "divider",
           }}
         >
-          <Typography variant="body2" fontWeight={600}>
-            Product
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Features
-          </Link>
-          <Link color="text.secondary" href="#">
-            Testimonials
-          </Link>
-          <Link color="text.secondary" href="#">
-            Highlights
-          </Link>
-          <Link color="text.secondary" href="#">
-            Pricing
-          </Link>
-          <Link color="text.secondary" href="#">
-            FAQs
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: "none", sm: "flex" },
-            flexDirection: "column",
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            Company
-          </Typography>
-          <Link color="text.secondary" href="#">
-            About us
-          </Link>
-          <Link color="text.secondary" href="#">
-            Careers
-          </Link>
-          <Link color="text.secondary" href="#">
-            Press
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: "none", sm: "flex" },
-            flexDirection: "column",
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            Legal
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Terms
-          </Link>
-          <Link color="text.secondary" href="#">
-            Privacy
-          </Link>
-          <Link color="text.secondary" href="#">
-            Contact
-          </Link>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          pt: { xs: 4, sm: 8 },
-          width: "100%",
-          borderTop: "1px solid",
-          borderColor: "divider",
-        }}
-      >
-        <div>
-          <Link color="text.secondary" href="#">
-            Privacy Policy
-          </Link>
-          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Terms of Service
-          </Link>
-          <Copyright />
-        </div>
-        <Stack
-          direction="row"
-          justifyContent="left"
-          spacing={1}
-          useFlexGap
-          sx={{
-            color: "text.secondary",
-          }}
-        >
-          <IconButton
-            color="inherit"
-            href="https://github.com/mui"
-            aria-label="GitHub"
-            sx={{ alignSelf: "center" }}
+          <div>
+            <Copyright />
+          </div>
+          <Stack
+            direction="row"
+            justifyContent="left"
+            spacing={1}
+            useFlexGap
+            sx={{
+              color: "text.secondary",
+            }}
           >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://twitter.com/MaterialUI"
-            aria-label="X"
-            sx={{ alignSelf: "center" }}
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://www.linkedin.com/company/mui/"
-            aria-label="LinkedIn"
-            sx={{ alignSelf: "center" }}
-          >
-            <LinkedInIcon />
-          </IconButton>
-        </Stack>
+            <IconButton
+              color="inherit"
+              href="https://www.linkedin.com/in/thaiksantos/"
+              aria-label="LinkedIn"
+              sx={{ alignSelf: "center" }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              href="https://www.instagram.com/thaik.ttt/"
+              aria-label="Instagram"
+              sx={{ alignSelf: "center" }}
+            >
+              <InstagramIcon />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              href="https://api.whatsapp.com/send?phone=+5581985964758&text=Oi! Gostaria de agendar um horário"
+              aria-label="WhatsApp"
+              sx={{ alignSelf: "center" }}
+            >
+              <WhatsAppIcon />
+            </IconButton>
+          </Stack>
+        </Box>
       </Box>
     </Container>
   );

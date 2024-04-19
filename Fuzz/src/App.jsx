@@ -3,17 +3,13 @@ import PropTypes from "prop-types";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-// import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import NavBar from "./NavBar";
-// import Hero from "./components/Hero";
-// import LogoCollection from './components/LogoCollection';
 import Video from './Video';
 import Tattoos from './Tattoos';
 import Biography from "./Biography";
-// import Testimonials from './components/Testimonials';
-// import FAQ from './components/FAQ';
+import Telas from './Telas';
 import Footer from './Footer';
 import getLPTheme from "./getLPTheme";
 
@@ -55,7 +51,7 @@ ToggleCustomTheme.propTypes = {
 };
 
 export default function LandingPage() {
-  const [mode, setMode] = React.useState("light");
+  const [mode, setMode] = React.useState("dark");
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const LPtheme = createTheme(getLPTheme(mode));
   const defaultTheme = createTheme({ palette: { mode } });
@@ -72,19 +68,11 @@ export default function LandingPage() {
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
       <NavBar mode={mode} toggleColorMode={toggleColorMode} />
-      {/* <Hero /> */}
       <Box sx={{ bgcolor: "background.default" }}>
-        {/* <LogoCollection /> */}
         <Biography />
-        {/* <Divider /> */}
-        {/* <Testimonials /> */}
-        {/* <Divider /> */}
+        <Telas />
         <Tattoos />
         <Video />
-        {/* <Divider /> */}
-        {/* <Divider /> */}
-        {/* <FAQ /> */}
-        {/* <Divider /> */}
         <Footer />
       </Box>
       <ToggleCustomTheme

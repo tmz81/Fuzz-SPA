@@ -9,18 +9,40 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import BrushIcon from "@mui/icons-material/Brush";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import bio1 from "./assets/bio1.png";
+import bio2 from "./assets/bio2.png";
+import bio3 from "./assets/bio3.png";
+import bio4 from "./assets/bio4.png";
 
-import bioImage from './assets/bio.jpeg';
+const images = [
+  {
+    src: bio1,
+    alt: "Descrição tattoo 1",
+  },
+  {
+    src: bio2,
+    alt: "Descrição tattoo 2",
+  },
+  {
+    src: bio3,
+    alt: "Descrição tattoo 3",
+  },
+  {
+    src: bio4,
+    alt: "Descrição tattoo 4",
+  },
+];
 
 const items = [
   {
     icon: <DesignServicesIcon />,
     title: "Tattoos",
-    description:
-      "Cicatrizes em peles.",
+    description: "Cicatrizes em peles.",
     imageLight:
       'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
@@ -28,18 +50,16 @@ const items = [
   {
     icon: <BrushIcon />,
     title: "Telas",
-    description:
-      "Traços em telas.",
+    description: "Traços em telas.",
     imageLight:
       'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark:
       'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
-    icon: <MusicNoteIcon />,
-    title: "Músicas",
-    description:
-      "Sons autorais.",
+    icon: <PhotoCameraIcon />,
+    title: "Fotografias",
+    description: "Fotografias em modelo.",
     imageLight:
       'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark:
@@ -47,10 +67,9 @@ const items = [
   },
 ];
 
-
 export default function Biography() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
-  
+
   const handleItemClick = (index) => {
     setSelectedItemIndex(index);
   };
@@ -276,25 +295,44 @@ export default function Biography() {
           md={6}
           sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}
         >
-          <Card
-            variant="outlined"
-            sx={{
-              height: "100%",
-              width: "100%",
-              display: { xs: "none", sm: "flex" },
-              pointerEvents: "none",
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
             }}
+            loop={true}
           >
-            <Box
+            <Card
+              variant="outlined"
               sx={{
+                height: "100%",
                 width: "100%",
-                height: 'auto',
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundImage: `url(${bioImage})`
+                display: { xs: "none", sm: "flex" },
+                pointerEvents: "none",
               }}
-            />
-          </Card>
+            >
+              {images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <Box
+                    component="img"
+                    sx={{
+                      height: "80%",
+                      display: "block",
+                      maxWidth: "100%",
+                      width: "auto",
+                      mx: "auto",
+                    }}
+                    src={img.src}
+                    alt={img.alt}
+                  />
+                </SwiperSlide>
+              ))}
+            </Card>
+          </Swiper>
         </Grid>
       </Grid>
     </Container>
