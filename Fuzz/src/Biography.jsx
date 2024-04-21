@@ -3,72 +3,21 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import Chip from "@mui/material/Chip";
+import Collapse from "@mui/material/Collapse";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
-import BrushIcon from "@mui/icons-material/Brush";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import bio1 from "./assets/bio1.png";
-import bio2 from "./assets/bio2.png";
-import bio3 from "./assets/bio3.png";
-import bio4 from "./assets/bio4.png";
-
-const images = [
-  {
-    src: bio1,
-    alt: "Descrição tattoo 1",
-  },
-  {
-    src: bio2,
-    alt: "Descrição tattoo 2",
-  },
-  {
-    src: bio3,
-    alt: "Descrição tattoo 3",
-  },
-  {
-    src: bio4,
-    alt: "Descrição tattoo 4",
-  },
-];
-
-const items = [
-  {
-    icon: <DesignServicesIcon />,
-    title: "Tattoos",
-    description: "Cicatrizes em peles.",
-    imageLight:
-      'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
-  },
-  {
-    icon: <BrushIcon />,
-    title: "Telas",
-    description: "Traços em telas.",
-    imageLight:
-      'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/mobile-dark.png")',
-  },
-  {
-    icon: <PhotoCameraIcon />,
-    title: "Fotografias",
-    description: "Fotografias em modelo.",
-    imageLight:
-      'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/devices-dark.png")',
-  },
-];
+import { texts, items, images } from "./contentBiography";
 
 export default function Biography() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+  const [expandedIndex, setExpandedIndex] = React.useState(null);
 
   const handleItemClick = (index) => {
     setSelectedItemIndex(index);
@@ -90,17 +39,14 @@ export default function Biography() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Biography
+              {texts.title}
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Thaik Santos é um renomado artista tatuador, conhecido por sua
-              habilidade excepcional em criar obras de arte únicas na pele. Com
-              mais de 12 anos de experiência, ele especializou-se em estilos
-              abstratos, atraindo a diversificalão abstrada de todo o mundo.
+              {texts.description}
             </Typography>
           </div>
           <Grid
@@ -114,25 +60,6 @@ export default function Biography() {
                 key={index}
                 label={title}
                 onClick={() => handleItemClick(index)}
-                sx={{
-                  borderColor: (theme) => {
-                    if (theme.palette.mode === "light") {
-                      return selectedItemIndex === index ? "primary.light" : "";
-                    }
-                    return selectedItemIndex === index ? "primary.light" : "";
-                  },
-                  background: (theme) => {
-                    if (theme.palette.mode === "light") {
-                      return selectedItemIndex === index ? "none" : "";
-                    }
-                    return selectedItemIndex === index ? "none" : "";
-                  },
-                  backgroundColor:
-                    selectedItemIndex === index ? "primary.main" : "",
-                  "& .MuiChip-label": {
-                    color: selectedItemIndex === index ? "#fff" : "",
-                  },
-                }}
               />
             ))}
           </Grid>
@@ -144,17 +71,6 @@ export default function Biography() {
               mt: 4,
             }}
           >
-            <Box
-              sx={{
-                backgroundImage: (theme) =>
-                  theme.palette.mode === "light"
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: 280,
-              }}
-            />
             <Box sx={{ px: 2, pb: 2 }}>
               <Typography
                 color="text.primary"
@@ -197,7 +113,7 @@ export default function Biography() {
             useFlexGap
             sx={{ width: "100%", display: { xs: "none", sm: "flex" } }}
           >
-            {items.map(({ icon, title, description }, index) => (
+            {items.map(({ icon, title, description, content }, index) => (
               <Card
                 key={index}
                 variant="outlined"
@@ -275,6 +191,9 @@ export default function Biography() {
                       }}
                       onClick={(event) => {
                         event.stopPropagation();
+                        setExpandedIndex(
+                          expandedIndex === index ? null : index
+                        );
                       }}
                     >
                       <span>Learn more</span>
@@ -282,6 +201,15 @@ export default function Biography() {
                         fontSize="small"
                         sx={{ mt: "1px", ml: "2px" }}
                       />
+                      <Collapse in={expandedIndex === selectedItemIndex}>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{ my: 2 }}
+                        >
+                          {content}
+                        </Typography>
+                      </Collapse>
                     </Link>
                   </Box>
                 </Box>
@@ -296,10 +224,9 @@ export default function Biography() {
           sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}
         >
           <Swiper
+            modules={[Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
