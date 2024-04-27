@@ -45,7 +45,7 @@ export default function CreativeProcess() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Processos Criativos
+          Processo Criativo
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
