@@ -168,14 +168,14 @@ function NavBar({ mode, toggleColorMode }) {
                   <MenuItem onClick={() => scrollToSection("bio")}>
                     Bio
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("tattoos")}>
-                    tattoos
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("creativeProcess")}>
-                    Creative Process
+                  <MenuItem onClick={() => scrollToSection("telas")}>
+                    Telas
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("tattoos")}>
                     Tattos
+                  </MenuItem>
+                  <MenuItem onClick={() => scrollToSection("creativeProcess")}>
+                    Creative Process
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("contact")}>
                     Contact

@@ -6,15 +6,12 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Copyright() {
   return (
     <Typography variant="body1" color="text.primary" mt={1}>
-      {"E-mail para contato "}
-      <Link href="mailto:thaik.ttt@gmail.com">
-        thaik.ttt@gmail.com&nbsp;
-      </Link>
+      {"Contato: "}
+      <Link href="mailto:thaik.ttt@gmail.com">thaik.ttt@gmail.com&nbsp;</Link>
     </Typography>
   );
 }
@@ -22,6 +19,7 @@ function Copyright() {
 export default function Footer() {
   return (
     <Container
+      id="contact"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -68,14 +66,6 @@ export default function Footer() {
               sx={{ alignSelf: "center" }}
             >
               <InstagramIcon />
-            </IconButton>
-            <IconButton
-              color="inherit"
-              href="https://api.whatsapp.com/send?phone=+5581985964758&text=Oi! Gostaria de agendar um horário"
-              aria-label="WhatsApp"
-              sx={{ alignSelf: "center" }}
-            >
-              <WhatsAppIcon />
             </IconButton>
           </Stack>
         </Box>
