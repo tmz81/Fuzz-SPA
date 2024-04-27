@@ -1,6 +1,12 @@
 import bio1 from "./assets/bio1.webp";
 import bio2 from "./assets/bio2.webp";
 import bio3 from "./assets/bio3.webp";
+import tela1 from "./assets/tela1.webp";
+import tela2 from "./assets/tela2.webp";
+import tela3 from "./assets/tela3.webp";
+import tela4 from "./assets/tela4.webp";
+import tela5 from "./assets/tela5.webp";
+import tela6 from "./assets/tela6.webp";
 import tattoo1 from "./assets/tattoo1.webp";
 import tattoo2 from "./assets/tattoo2.webp";
 import tattoo3 from "./assets/tattoo3.webp";
@@ -48,6 +54,15 @@ export const imgBio = [
     src: bio3,
     alt: "Descrição tattoo 3",
   },
+];
+
+export const imgTelas = [
+  { src: tela1, alt: "tela 1" },
+  { src: tela2, alt: "tela 2" },
+  { src: tela3, alt: "tela 3" },
+  { src: tela4, alt: "tela 4" },
+  { src: tela5, alt: "tela 5" },
+  { src: tela6, alt: "tela 6" },
 ];
 
 export const imgTattos = [
@@ -102,4 +117,4 @@ export const imgProcess = [
     src: processos6,
     alt: "Processo 6",
   },
-]
+];

@@ -1,46 +1,30 @@
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import processos1 from "./assets/processos1.webp";
-import processos2 from "./assets/processos2.webp";
-import processos3 from "./assets/processos3.webp";
-import processos4 from "./assets/processos4.webp";
-import processos5 from "./assets/processos5.webp";
-import processos6 from "./assets/processos6.webp";
-
-const images = [
-  {
-    src: processos1,
-    alt: "processos 1",
-  },
-  {
-    src: processos2,
-    alt: "processos 2",
-  },
-  {
-    src: processos3,
-    alt: "processos 3",
-  },
-  {
-    src: processos4,
-    alt: "processos 4",
-  },
-  {
-    src: processos5,
-    alt: "processos 5",
-  },
-  {
-    src: processos6,
-    alt: "processos 6",
-  },
-];
+import { imgProcess } from "./Content";
 
 export default function CreativeProcess() {
+  const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState({});
+
+  const handleOpen = (img) => {
+    setCurrentImage(img);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Container
       id="creativeProcess"
@@ -77,7 +61,7 @@ export default function CreativeProcess() {
           }}
           loop={true}
         >
-          {images.map((img, index) => (
+          {imgProcess.map((img, index) => (
             <Grid item key={img.alt} xs={12} md={4}>
               <SwiperSlide key={index}>
                 <Card
@@ -97,9 +81,11 @@ export default function CreativeProcess() {
                       maxHeight: "100%",
                       width: "auto",
                       mx: "auto",
+                      cursor: "pointer",
                     }}
                     src={img.src}
                     alt={img.alt}
+                    onClick={() => handleOpen(img)}
                   />
                 </Card>
               </SwiperSlide>
@@ -108,16 +94,43 @@ export default function CreativeProcess() {
         </Swiper>
       </Grid>
       <Grid item xs={12} sm={6} md={4} sx={{ mt: 14 }}>
-        <iframe
-          width="900px"
-          height="530px"
-          border="none"
-          src="https://www.youtube.com/embed/BWoY-OFQxU0?si=ch-jY-45eqzOHlPi"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen={true}
-        ></iframe>
+        <Box
+          sx={{
+            position: "relative",
+            width: "100%",
+            overflow: "hidden",
+          }}
+        >
+          <iframe
+            width="900px"
+            height="530px"
+            border="none"
+            src="https://www.youtube.com/embed/BWoY-OFQxU0?si=ch-jY-45eqzOHlPi"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen={true}
+          ></iframe>
+        </Box>
       </Grid>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Box sx={{ position: "relative", width: "80%", height: "80%" }}>
+          <IconButton
+            sx={{ position: "absolute", top: 8, right: 8, color: "white" }}
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </Box>
+      </Modal>
     </Container>
   );
 }

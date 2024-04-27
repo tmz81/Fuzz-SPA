@@ -1,46 +1,30 @@
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import img1 from "./assets/tattoo1.webp";
-import img2 from "./assets/tattoo2.webp";
-import img3 from "./assets/tattoo3.webp";
-import img4 from "./assets/tattoo4.webp";
-import img5 from "./assets/tattoo5.webp";
-import img6 from "./assets/tattoo6.webp";
-
-const images = [
-  {
-    src: img1,
-    alt: "Descrição tattoo 1",
-  },
-  {
-    src: img2,
-    alt: "Descrição tattoo 2",
-  },
-  {
-    src: img3,
-    alt: "Descrição tattoo 3",
-  },
-  {
-    src: img4,
-    alt: "Descrição tattoo 4",
-  },
-  {
-    src: img5,
-    alt: "Descrição tattoo 5",
-  },
-  {
-    src: img6,
-    alt: "Descrição tattoo 6",
-  },
-];
+import { imgTattos } from "./Content";
 
 export default function Tattoos() {
+  const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState({});
+
+  const handleOpen = (img) => {
+    setCurrentImage(img);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Container
       id="tattoos"
@@ -62,7 +46,7 @@ export default function Tattoos() {
       >
         <Typography component="h2" variant="h4" color="text.primary">
           Tattoos
-        </Typography> 
+        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         <Swiper
@@ -77,7 +61,7 @@ export default function Tattoos() {
           }}
           loop={true}
         >
-          {images.map((img, index) => (
+          {imgTattos.map((img, index) => (
             <Grid item key={img.alt} xs={12} md={4}>
               <SwiperSlide key={index}>
                 <Card
@@ -97,9 +81,11 @@ export default function Tattoos() {
                       maxHeight: "100%",
                       width: "auto",
                       mx: "auto",
+                      cursor: "pointer",
                     }}
                     src={img.src}
                     alt={img.alt}
+                    onClick={() => handleOpen(img)}
                   />
                 </Card>
               </SwiperSlide>
@@ -107,6 +93,25 @@ export default function Tattoos() {
           ))}
         </Swiper>
       </Grid>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Box sx={{ position: "relative", width: "80%", height: "80%" }}>
+          <IconButton
+            sx={{ position: "absolute", top: 8, right: 8, color: "white" }}
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </Box>
+      </Modal>
     </Container>
   );
 }

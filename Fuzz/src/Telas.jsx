@@ -1,44 +1,27 @@
+import { useState } from "react";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
-import tela1 from "./assets/tela1.webp";
-import tela2 from "./assets/tela2.webp";
-import tela3 from "./assets/tela3.webp";
-import tela4 from "./assets/tela4.webp";
-import tela5 from "./assets/tela5.webp";
-import tela6 from "./assets/tela6.webp";
-
-const images = [
-  {
-    src: tela1,
-    alt: "tela 1",
-  },
-  {
-    src: tela2,
-    alt: "tela 2",
-  },
-  {
-    src: tela3,
-    alt: "tela 3",
-  },
-  {
-    src: tela4,
-    alt: "tela 4",
-  },
-  {
-    src: tela5,
-    alt: "tela 5",
-  },
-  {
-    src: tela6,
-    alt: "tela 6",
-  },
-];
+import Modal from "@mui/material/Modal";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import { imgTelas } from "./Content";
 
 export default function Telas() {
+  const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState({});
+
+  const handleOpen = (img) => {
+    setCurrentImage(img);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Container
       id="telas"
@@ -61,7 +44,7 @@ export default function Telas() {
         </Typography>
       </Box>
       <Grid container spacing={2}>
-        {images.map((img, index) => (
+        {imgTelas.map((img, index) => (
           <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
             <Card
               sx={{
@@ -73,7 +56,6 @@ export default function Telas() {
               }}
             >
               <Box
-                key={index}
                 component="img"
                 sx={{
                   height: "100%",
@@ -81,14 +63,35 @@ export default function Telas() {
                   maxWidth: "100%",
                   width: "auto",
                   mx: "auto",
+                  cursor: "pointer",
                 }}
                 src={img.src}
                 alt={img.alt}
+                onClick={() => handleOpen(img)}
               />
             </Card>
           </Grid>
         ))}
       </Grid>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Box sx={{ position: "relative", width: "80%", height: "80%" }}>
+          <IconButton
+            sx={{ position: "absolute", top: 8, right: 8, color: "white" }}
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+        </Box>
+      </Modal>
     </Container>
   );
 }
