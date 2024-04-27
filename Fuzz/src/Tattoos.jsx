@@ -63,12 +63,6 @@ export default function Tattoos() {
         <Typography component="h2" variant="h4" color="text.primary">
           Tattoos
         </Typography> 
-        <Typography variant="body1" color="text.secondary">
-          De padrões geométricos a majestosas traços de arte abstratas, o
-          repertório de <strong>Thaik Santos</strong> reflete sua jornada
-          artística sem fronteiras. Especializado em diversificação de estilos
-          para atender a essência única de cada cliente.
-        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         <Swiper

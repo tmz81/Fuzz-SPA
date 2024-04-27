@@ -63,11 +63,6 @@ export default function CreativeProcess() {
         <Typography component="h2" variant="h4" color="text.primary">
           Processos Criativos
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel
-          in efficiency, durability, and satisfaction. Join us for quality,
-          innovation, and reliable support.
-        </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         <Swiper

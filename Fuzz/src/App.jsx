@@ -5,13 +5,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import NavBar from "./NavBar";
-import CreativeProcess from './CreativeProcess';
-import Tattoos from './Tattoos';
-import Biography from "./Biography";
-import Telas from './Telas';
-import Footer from './Footer';
 import getLPTheme from "./getLPTheme";
+
+const NavBar = React.lazy(() => import("./NavBar"));
+const CreativeProcess = React.lazy(() => import("./CreativeProcess"));
+const Tattoos = React.lazy(() => import("./Tattoos"));
+const Biography = React.lazy(() => import("./Biography"));
+const Telas = React.lazy(() => import("./Telas"));
+const Footer = React.lazy(() => import("./Footer"));
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
   return (
@@ -37,8 +38,7 @@ function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
             pointerEvents: "none",
           },
         }}
-      >
-      </ToggleButtonGroup>
+      ></ToggleButtonGroup>
     </Box>
   );
 }
@@ -67,14 +67,16 @@ export default function LandingPage() {
   return (
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
-      <NavBar mode={mode} toggleColorMode={toggleColorMode} />
-      <Box sx={{ bgcolor: "background.default" }}>
-        <Biography />
-        <Telas />
-        <Tattoos />
-        <CreativeProcess />
-        <Footer />
-      </Box>
+      <React.Suspense fallback={<div>Carregando...</div>}>
+        <NavBar mode={mode} toggleColorMode={toggleColorMode} />
+        <Box sx={{ bgcolor: "background.default" }}>
+          <Biography />
+          <Telas />
+          <Tattoos />
+          <CreativeProcess />
+          <Footer />
+        </Box>
+      </React.Suspense>
       <ToggleCustomTheme
         showCustomTheme={showCustomTheme}
         toggleCustomTheme={toggleCustomTheme}
