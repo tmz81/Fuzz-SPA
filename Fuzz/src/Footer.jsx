@@ -1,10 +1,8 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -12,10 +10,11 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Copyright() {
   return (
-    <Typography variant="body1" color="text.primary"  mt={1}>
+    <Typography variant="body1" color="text.primary" mt={1}>
       {"E-mail para contato "}
-      <Link href="https://www.linkedin.com/in/tmz81/">thaik.ttt@gmail.com&nbsp;</Link>
-      {/* {new Date().getFullYear()} */}
+      <Link href="mailto:thaik.ttt@gmail.com">
+        thaik.ttt@gmail.com&nbsp;
+      </Link>
     </Typography>
   );
 }
@@ -40,45 +39,6 @@ export default function Footer() {
           justifyContent: "space-between",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 4,
-            minWidth: { xs: "100%", sm: "60%" },
-          }}
-        >
-          <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-            <Typography variant="body2" fontWeight={600} gutterBottom>
-              Ativar notificações.
-            </Typography>
-            <Typography variant="body2" color="text.secondary" mb={2}>
-              Informe seu e-mail para receber notificações de novas postagens.
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="exemplo@gmail.com"
-                inputProps={{
-                  autocomplete: "off",
-                  ariaLabel: "Enter your email address",
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ flexShrink: 0 }}
-              >
-                Inscrever-se
-              </Button>
-            </Stack>
-          </Box>
-        </Box>
         <Box
           sx={{
             display: "flex",

@@ -6,12 +6,12 @@ import Typography from "@mui/material/Typography";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import img1 from "./assets/tattoo1.jpg";
-import img2 from "./assets/tattoo2.jpg";
-import img3 from "./assets/tattoo3.jpg";
-import img4 from "./assets/tattoo4.jpg";
-import img5 from "./assets/tattoo5.jpg";
-import img6 from "./assets/tattoo6.jpg";
+import img1 from "./assets/tattoo1.webp";
+import img2 from "./assets/tattoo2.webp";
+import img3 from "./assets/tattoo3.webp";
+import img4 from "./assets/tattoo4.webp";
+import img5 from "./assets/tattoo5.webp";
+import img6 from "./assets/tattoo6.webp";
 
 const images = [
   {

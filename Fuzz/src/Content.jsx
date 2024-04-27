@@ -1,18 +1,18 @@
-import bio1 from "./assets/bio1.jpg";
-import bio2 from "./assets/bio2.jpg";
-import bio3 from "./assets/bio3.jpg";
-import tattoo1 from "./assets/tattoo1.jpg";
-import tattoo2 from "./assets/tattoo2.jpg";
-import tattoo3 from "./assets/tattoo3.jpg";
-import tattoo4 from "./assets/tattoo4.jpg";
-import tattoo5 from "./assets/tattoo5.jpg";
-import tattoo6 from "./assets/tattoo6.jpg";
-import processos1 from "./assets/processos1.jpg";
-import processos2 from "./assets/processos2.jpg";
-import processos3 from "./assets/processos3.jpg";
-import processos4 from "./assets/processos4.jpg";
-import processos5 from "./assets/processos5.jpg";
-import processos6 from "./assets/processos6.jpg";
+import bio1 from "./assets/bio1.webp";
+import bio2 from "./assets/bio2.webp";
+import bio3 from "./assets/bio3.webp";
+import tattoo1 from "./assets/tattoo1.webp";
+import tattoo2 from "./assets/tattoo2.webp";
+import tattoo3 from "./assets/tattoo3.webp";
+import tattoo4 from "./assets/tattoo4.webp";
+import tattoo5 from "./assets/tattoo5.webp";
+import tattoo6 from "./assets/tattoo6.webp";
+import processos1 from "./assets/processos1.webp";
+import processos2 from "./assets/processos2.webp";
+import processos3 from "./assets/processos3.webp";
+import processos4 from "./assets/processos4.webp";
+import processos5 from "./assets/processos5.webp";
+import processos6 from "./assets/processos6.webp";
 
 export const textBio = {
   title: "Thaik Santos",

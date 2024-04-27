@@ -4,12 +4,12 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-import tela1 from "./assets/tela1.jpg";
-import tela2 from "./assets/tela2.jpg";
-import tela3 from "./assets/tela3.jpg";
-import tela4 from "./assets/tela4.jpg";
-import tela5 from "./assets/tela5.jpg";
-import tela6 from "./assets/tela6.jpg";
+import tela1 from "./assets/tela1.webp";
+import tela2 from "./assets/tela2.webp";
+import tela3 from "./assets/tela3.webp";
+import tela4 from "./assets/tela4.webp";
+import tela5 from "./assets/tela5.webp";
+import tela6 from "./assets/tela6.webp";
 
 const images = [
   {
