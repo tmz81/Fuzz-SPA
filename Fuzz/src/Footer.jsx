@@ -7,16 +7,15 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" mt={1}>
-      {"Copyright © "}
-      <Link href="https://www.linkedin.com/in/tmz81/">tmz81&nbsp;</Link>
-      {new Date().getFullYear()}
+    <Typography variant="body1" color="text.primary"  mt={1}>
+      {"E-mail para contato "}
+      <Link href="https://www.linkedin.com/in/tmz81/">thaik.ttt@gmail.com&nbsp;</Link>
+      {/* {new Date().getFullYear()} */}
     </Typography>
   );
 }
@@ -102,14 +101,6 @@ export default function Footer() {
               color: "text.secondary",
             }}
           >
-            <IconButton
-              color="inherit"
-              href="https://www.linkedin.com/in/thaiksantos/"
-              aria-label="LinkedIn"
-              sx={{ alignSelf: "center" }}
-            >
-              <LinkedInIcon />
-            </IconButton>
             <IconButton
               color="inherit"
               href="https://www.instagram.com/thaik.ttt/"

@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import NavBar from "./NavBar";
-import Video from './Video';
+import CreativeProcess from './CreativeProcess';
 import Tattoos from './Tattoos';
 import Biography from "./Biography";
 import Telas from './Telas';
@@ -72,7 +72,7 @@ export default function LandingPage() {
         <Biography />
         <Telas />
         <Tattoos />
-        <Video />
+        <CreativeProcess />
         <Footer />
       </Box>
       <ToggleCustomTheme

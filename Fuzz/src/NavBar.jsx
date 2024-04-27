@@ -91,6 +91,14 @@ function NavBar({ mode, toggleColorMode }) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
+                  onClick={() => scrollToSection("telas")}
+                  sx={{ py: "6px", px: "12px" }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    Telas
+                  </Typography>
+                </MenuItem>
+                <MenuItem
                   onClick={() => scrollToSection("tattoos")}
                   sx={{ py: "6px", px: "12px" }}
                 >
@@ -103,15 +111,7 @@ function NavBar({ mode, toggleColorMode }) {
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Creative Process
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("tattoos")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Tattoos
+                    Processo Criativo
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -119,7 +119,7 @@ function NavBar({ mode, toggleColorMode }) {
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Contact
+                    Contatos
                   </Typography>
                 </MenuItem>
               </Box>

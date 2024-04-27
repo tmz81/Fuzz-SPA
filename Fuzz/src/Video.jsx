@@ -43,7 +43,7 @@ export default function Video() {
               width="560"
               height="310"
               border="none"
-              src="https://www.youtube.com/embed/A1vKAe9RUsQ"
+              src="https://www.youtube.com/embed/BWoY-OFQxU0?si=ch-jY-45eqzOHlPi"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen

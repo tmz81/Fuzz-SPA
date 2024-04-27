@@ -1,19 +1,17 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import img1 from "./assets/img2.png";
-import img2 from "./assets/img6.png";
-import img3 from "./assets/img5.png";
-import img4 from "./assets/img1.png";
-import img5 from "./assets/img3.png";
-import img6 from "./assets/img4.png";
-import img7 from "./assets/img7.png";
-import img8 from "./assets/img8.png";
+import img1 from "./assets/tattoo1.jpg";
+import img2 from "./assets/tattoo2.jpg";
+import img3 from "./assets/tattoo3.jpg";
+import img4 from "./assets/tattoo4.jpg";
+import img5 from "./assets/tattoo5.jpg";
+import img6 from "./assets/tattoo6.jpg";
 
 const images = [
   {
@@ -40,14 +38,6 @@ const images = [
     src: img6,
     alt: "Descrição tattoo 6",
   },
-  {
-    src: img7,
-    alt: "Descrição tattoo 7",
-  },
-  {
-    src: img8,
-    alt: "Descrição tattoo 8",
-  },
 ];
 
 export default function Tattoos() {
@@ -72,7 +62,7 @@ export default function Tattoos() {
       >
         <Typography component="h2" variant="h4" color="text.primary">
           Tattoos
-        </Typography>
+        </Typography> 
         <Typography variant="body1" color="text.secondary">
           De padrões geométricos a majestosas traços de arte abstratas, o
           repertório de <strong>Thaik Santos</strong> reflete sua jornada
@@ -82,6 +72,7 @@ export default function Tattoos() {
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
         <Swiper
+          modules={[Autoplay]}
           spaceBetween={50}
           slidesPerView={3}
           onSlideChange={() => console.log("slide change")}
@@ -103,21 +94,19 @@ export default function Tattoos() {
                     gap: 4,
                   }}
                 >
-                  <CardContent>
-                    <Box
-                      component="img"
-                      sx={{
-                        height: "50%",
-                        display: "block",
-                        maxWidth: "100%",
-                        maxHeight: "100%",
-                        width: "auto",
-                        mx: "auto",
-                      }}
-                      src={img.src}
-                      alt={img.alt}
-                    />
-                  </CardContent>
+                  <Box
+                    component="img"
+                    sx={{
+                      height: "10%",
+                      display: "block",
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      width: "auto",
+                      mx: "auto",
+                    }}
+                    src={img.src}
+                    alt={img.alt}
+                  />
                 </Card>
               </SwiperSlide>
             </Grid>
