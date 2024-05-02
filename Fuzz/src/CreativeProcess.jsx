@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { imgProcess } from "./Content";
+import Video from "./Video";
 
 export default function CreativeProcess() {
   const [open, setOpen] = useState(false);
@@ -93,25 +94,11 @@ export default function CreativeProcess() {
           ))}
         </Swiper>
       </Grid>
-      <Grid item xs={12} sm={6} md={4} sx={{ mt: 14 }}>
-        <Box
-          sx={{
-            position: "relative",
-            width: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <iframe
-            width="900px"
-            height="530px"
-            border="none"
-            src="https://www.youtube.com/embed/BWoY-OFQxU0?si=ch-jY-45eqzOHlPi"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen={true}
-          ></iframe>
-        </Box>
+      <Grid container spacing={2}>
+      <Grid item xs={12} sm={12} md={12} sx={{ mt: 14 }}>
+        <Video />
       </Grid>
+    </Grid>
       <Modal
         open={open}
         onClose={handleClose}
