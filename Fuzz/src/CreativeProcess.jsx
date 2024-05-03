@@ -49,7 +49,7 @@ export default function CreativeProcess() {
           Processo Criativo
         </Typography>
       </Box>
-      <Grid container spacing={3} alignItems="center" justifyContent="center">
+      <Grid container spacing={1} alignItems="center" justifyContent="center">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}
@@ -68,7 +68,7 @@ export default function CreativeProcess() {
               spaceBetween: 30,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 40,
             },
           }}

@@ -26,7 +26,7 @@ export default function Biography() {
               component="h2"
               variant="h4"
               color="text.primary"
-              sx={{  mb: 8, mt: 4 }}
+              sx={{ mb: 8, mt: 4 }}
             >
               {textBio.title}
             </Typography>
@@ -80,7 +80,7 @@ export default function Biography() {
           item
           xs={12}
           md={6}
-          sx={{ display: { xs: "none", sm: "flex" }, width: "100%" }}
+          sx={{ display: "flex", width: "100%" }}
         >
           <Swiper
             modules={[Autoplay]}

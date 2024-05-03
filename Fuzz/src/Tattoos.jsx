@@ -48,7 +48,7 @@ export default function Tattoos() {
           Tattoos
         </Typography>
       </Box>
-      <Grid container spacing={3} alignItems="center" justifyContent="center">
+      <Grid container spacing={1} alignItems="center" justifyContent="center">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}

@@ -36,7 +36,7 @@ export default function Telas() {
       <Box
         sx={{
           width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
+          textAlign: "center",
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">

@@ -9,7 +9,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 function Copyright() {
   return (
     <Typography variant="h6" color="text.primary" mt={1}>
-      {"Contato: "}
       <Link href="mailto:thaik.ttt@gmail.com">thaik.ttt@gmail.com&nbsp;</Link>
     </Typography>
   );
