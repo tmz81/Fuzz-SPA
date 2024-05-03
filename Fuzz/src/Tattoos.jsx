@@ -41,7 +41,7 @@ export default function Tattoos() {
       <Box
         sx={{
           width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
+          textAlign: "center",
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
@@ -53,6 +53,24 @@ export default function Tattoos() {
           modules={[Autoplay]}
           spaceBetween={50}
           slidesPerView={3}
+          breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3, 
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           autoplay={{
@@ -62,11 +80,18 @@ export default function Tattoos() {
           loop={true}
         >
           {imgTattos.map((img, index) => (
-            <Grid item key={img.alt} xs={12} md={4}>
+            <Grid
+              item
+              key={img.alt}
+              xs={12}
+              SM={6}
+              md={4}
+              sx={{ display: "flex" }}
+            >
               <SwiperSlide key={index}>
                 <Card
                   sx={{
-                    p: 2,
+                    p: 1,
                     display: "flex",
                     flexDirection: "column",
                     gap: 4,
@@ -75,7 +100,7 @@ export default function Tattoos() {
                   <Box
                     component="img"
                     sx={{
-                      height: "10%",
+                      height: "100%",
                       display: "block",
                       maxWidth: "100%",
                       maxHeight: "100%",
