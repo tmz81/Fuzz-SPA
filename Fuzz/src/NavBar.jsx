@@ -119,7 +119,7 @@ function NavBar({ mode, toggleColorMode }) {
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Contatos
+                    Contato
                   </Typography>
                 </MenuItem>
               </Box>
@@ -172,13 +172,13 @@ function NavBar({ mode, toggleColorMode }) {
                     Telas
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("tattoos")}>
-                    Tattos
+                    Tattoos
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("creativeProcess")}>
-                    Creative Process
+                    Processo Criativo
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("contact")}>
-                    Contact
+                    Contato
                   </MenuItem>
                   <Divider />
                 </Box>
